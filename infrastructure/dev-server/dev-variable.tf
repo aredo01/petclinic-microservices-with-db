@@ -1,4 +1,4 @@
-variable "mykey" {}
+variable "learn1" {}
 variable "ami" {
   description = "amazon linux 2023 ami"
 }
