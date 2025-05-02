@@ -12,5 +12,5 @@ kubectl create secret generic regcred -n petclinic-prod-ns \
     --type=kubernetes.io/dockerconfigjson
 AWS_REGION=$AWS_REGION helm repo update
 AWS_REGION=$AWS_REGION helm upgrade --install \
-    petclinic-app-release stable-petclinic/petclinic_chart --version ${BUILD_NUMBER} \
+    petclinic-app-release stable-petclinic/petclinic_chart --set DNS_NAME='petclinic.aredodevops.com' --version ${BUILD_NUMBER} \
     --namespace petclinic-prod-ns
